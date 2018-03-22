@@ -23,6 +23,7 @@ shirts: payload map {
 
 __Constants and functions (%var):__
 
+~~~~
 %dw 1.0
 %var prefix = 'The destination is: '
 %var append = (param1, param2) ->  param1 ++ param2
@@ -39,6 +40,7 @@ flights: {(payload map {
 	}
  })
 }
+~~~~
 
 <table>
 <tr>
