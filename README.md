@@ -8,7 +8,7 @@ Reference: https://docs.mulesoft.com/mule-user-guide/v/3.9/dataweave
 
 `@`: Create or reference XML attribute 
 
-map operator:
+__Map operator:__
 
 ~~~~
 %dw 1.0
@@ -20,6 +20,25 @@ shirts: payload map {
         count: $.count
 }
 ~~~~
+
+__Constants and functions (%var):__
+
+%dw 1.0
+%var prefix = 'The destination is: '
+%var append = (param1, param2) ->  param1 ++ param2
+%var createFlightCodeElement = (code) -> flightCode: code
+%var createDestinationCodeElement = (dest) -> destinationCode: dest
+%output application/xml
+---
+flights: {(payload map {
+	flight @(flightCode: $.code):
+	{	
+		destination: append(prefix, $.destination),
+        code: createFlightCodeElement($.code),
+        dest: createDestinationCodeElement($.destination)
+	}
+ })
+}
 
 <table>
 <tr>
