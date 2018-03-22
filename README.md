@@ -10,6 +10,22 @@ Reference: https://docs.mulesoft.com/mule-user-guide/v/3.9/dataweave
 
 `%output application/dw`: [Outputs the cannonical datamodel of DataWeave](https://docs.mulesoft.com/mule-user-guide/v/3.8/dataweave-reference-documentation#example-transformation-to-dataweave)
 
+__Object:__
+
+~~~~
+{
+  key: "value"
+}
+~~~~
+
+__Array:__
+~~~~
+%dw 1.0
+%output application/json
+---
+[ "elem1", "elem2", "elem3" ]
+~~~~
+
 __Map operator:__
 
 ~~~~
