@@ -8,6 +8,8 @@ Reference: https://docs.mulesoft.com/mule-user-guide/v/3.9/dataweave
 
 `@`: Create or reference XML attribute 
 
+`%output application/dw`: [Outputs the cannonical datamodel of DataWeave](https://docs.mulesoft.com/mule-user-guide/v/3.8/dataweave-reference-documentation#example-transformation-to-dataweave)
+
 __Map operator:__
 
 ~~~~
