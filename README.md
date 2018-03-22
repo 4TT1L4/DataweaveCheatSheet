@@ -3,8 +3,11 @@
 Reference: https://docs.mulesoft.com/mule-user-guide/v/3.9/dataweave
 
 `$$`: key/ index
+
 `$`: value
+
 `@`: Create or reference XML attribute 
+
 
 
 
