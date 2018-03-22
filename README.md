@@ -8,8 +8,18 @@ Reference: https://docs.mulesoft.com/mule-user-guide/v/3.9/dataweave
 
 `@`: Create or reference XML attribute 
 
+map operator:
 
-
+~~~~
+%dw 1.0
+%output application/json
+---
+shirts: payload map {
+        size: upper $.size,
+        description: $.description,
+        count: $.count
+}
+~~~~
 
 <table>
 <tr>
